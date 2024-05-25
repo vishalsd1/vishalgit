@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" id="Container">
+        <div class="first-half">
+            <div class="img">
+                <i class="fa-solid fa-key"></i>
+            </div>
+            <div class="title">
+                <h1>Reset password</h1>
+                <p>Please enter the same phone no. where you used to sign in.*</p>
+            </div>
+        </div>
+        <div class="second-half">
+            <div class="input-box">
+                <label><input type="tel" placeholder="enter phone no." id="PhoneNo"></label>
+
+            </div>
+            <div class="btn">
+                <label><button id="sendBtn">Send</button></label>
+                <label><button id="cancel">cancel</button></label>
+            </div>
+            <div class="hidden" id="hiddenContent">
+                <div class="otp OTPboxAll" id="OTPboxAll">
+                    <label>OTP :
+                        <span><input type="tel"></span>
+                        <span><input type="tel"></span>
+                        <span><input type="tel"></span>
+                        <span><input type="tel"></span></label>
+                </div>
+                <div class="verified" id="verify">
+                    <label id="verified1"><i class="fa-sharp fa-solid fa-circle-check"></i> verified</label><br>
+                    <div class="btn submit">
+                        <label><button id="submitBtn">submit</button></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container2" id="container2">
+        <div class="upside">
+            <div class="setpassword">
+                <label id="label1">set-password : <input type="password" placeholder="Password"></label><br>
+                <label id="label2">Re-enter password : <input type="password" placeholder="Password"></label>
+            </div>
+            <div class="remainder">
+                
+                <input type="checkbox" id="reminder">
+                <label for="reminder">Remember me</label>
+            </div>
+        </div>
+        <div class="button">
+            <button id="confirmBtn" onclick="hide()">Confirm</button>
+        </div>
+        <div class="xmark">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

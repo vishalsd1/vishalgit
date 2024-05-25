@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="registration.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 10px;
+            text-align: left;
+            margin-left: 150px;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+        }
+
+        .input-error {
+            border: 1px solid red;
+        }
+
+        .strength-text {
+            font-size: 12px;
+            font-weight: lighter;
+            position: absolute;
+            left: 10px;
+            top: 45px;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="container">
+      
+        <div class="logo">
+            <img src="logo.png" alt="Logo" srcset="">
+            <h1>Registration</h1>
+        </div>
+
+ 
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="input-container">
+                <i class="icon fas fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <span class="error" id="nameError"></span>
+                <span id="nameFlag"></span>
+            </div>
+
+            <div class="input-container">
+                <i class="icon fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <span class="error" id="emailError"></span>
+                <span id="emailFlag"></span>
+            </div>
+
+            <div class="input-container">
+                <i class="icon fas fa-phone"></i>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                <span class="error" id="phoneError"></span>
+                <span id="phoneFlag"></span>
+            </div>
+
+       
+            <div class="input-container selection">
+                <select id="branch" name="branch" required>
+                    <option value="engineering" disabled selected>Branch</option>
+                    <option value="cs">CSE</option>
+                    <option value="mech">Mech</option>
+                    <option value="civil">Civil</option>
+                    <option value="ee">ENTC</option>
+                </select>
+                <!-- <span class="error" id="branchError"></span> -->
+                <!-- <span id="branchFlag"></span> -->
+
+                <select id="year" name="year" required>
+                    <option value="year" disabled selected>Year</option>
+                    <option value="first">1st year</option>
+                    <option value="second">2nd year</option>
+                    <option value="third">3rd year</option>
+                    <option value="final">Final year</option>
+                </select>
+                <!-- <span class="error" id="yearError"></span> -->
+                <!-- <span id="yearFlag"></span> -->
+            </div>
+
+            <div class="input-container">
+                <i class="icon fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span class="error" id="passwordError"></span>
+                <span id="passwordFlag"></span>
+                <div class="strength-text" id="passwordStrengthText"></div>
+            </div>
+            
+            <div class="input-container">
+                <i class="icon fas fa-lock"></i>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                <span class="error" id="confirm_passwordError"></span>
+                <span id="confirm_passwordFlag"></span>
+            </div>
+            
+
+            <div class="btn">
+                <button type="submit" onclick="validateForm()">Register</button>
+      
+            </div>
+        </form>
+    </div>
+
+    <script>
+    document.querySelectorAll('input, select').forEach(function(input) {
+    input.addEventListener('input', function() {
+        validateInput({ target: input });
+        if (input.value !== "") {
+            input.closest('.input-container').classList.add('has-value');
+        } else {
+            input.closest('.input-container').classList.remove('has-value');
+        }
+    });
+});
+
+var inputs = document.querySelectorAll('input, select');
+
+
+inputs.forEach(function(input) {
+    input.addEventListener('input', validateInput);
+});
+
+function validateInput(event) {
+    var input = event.target;
+    var errorSpan = document.getElementById(input.id + "Error");
+    var flagSpan = document.getElementById(input.id + "Flag");
+    var isValid = true;
+
+    switch (input.id) {
+        case "name":
+            if (input.value === "") {
+                errorSpan.textContent = "Please enter your name";
+                flagSpan.textContent = "";
+                isValid = false;
+            } else {
+                errorSpan.textContent = "";
+            
+            }
+            break;
+        case "email":
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(input.value)) {
+                errorSpan.textContent = "Please enter a valid email address";
+                flagSpan.textContent = "";
+                isValid = false;
+            } else {
+                errorSpan.textContent = "";
+                flagSpan.innerHTML = '<i class="fas fa-check-circle" style="color: green;"></i>';
+            }
+            break;
+        case "phone":
+            var phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(input.value)) {
+                errorSpan.textContent = "Please enter a 10-digit phone number";
+                flagSpan.textContent = "";
+                isValid = false;
+            } else {
+                errorSpan.textContent = "";
+                flagSpan.innerHTML = '<i class="fas fa-check-circle" style="color: green;"></i>';
+            }
+            break;
+        case "branch":
+            if (input.value === "engineering") {
+                errorSpan.textContent = "Please select a branch";
+                flagSpan.textContent = "";
+                isValid = false;
+            } else {
+                errorSpan.textContent = "";
+                flagSpan.innerHTML = '<i class="fas fa-check-circle" style="color: green;"></i>';
+            }
+            break;
+        case "year":
+            if (input.value === "year") {
+                errorSpan.textContent = "Please select a year";
+                flagSpan.textContent = "";
+                isValid = false;
+            } else {
+                errorSpan.textContent = "";
+                flagSpan.innerHTML = '<i class="fas fa-check-circle" style="color: green;"></i>';
+            }
+            break;
+        case "password":
+            var strengthMeter = document.getElementById("passwordStrengthText");
+            var passwordStrength = calculatePasswordStrength(input.value);
+            updatePasswordStrengthText(strengthMeter, passwordStrength);
+            if (input.value.length < 8) {
+                errorSpan.textContent = "Password must be at least 8 characters long";
+                flagSpan.textContent = "";
+                isValid = false;
+            } else {
+                var passwordPattern = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{8,}$/;
+
+                if (!passwordPattern.test(input.value)) {
+                    errorSpan.textContent = "Password must contain at least one letter and one number";
+                    flagSpan.textContent = "";
+                    isValid = false;
+                } else {
+                    errorSpan.textContent = "";
+                    flagSpan.innerHTML = '<i class="fas fa-check-circle" style="color: green;"></i>';
+                }
+            }
+            break;
+        case "confirm_password":
+            var passwordInput = document.getElementById("password");
+            console.log("Password: ", passwordInput.value); 
+            console.log("Confirm Password: ", input.value); 
+            if (input.value !== passwordInput.value) {
+                errorSpan.textContent = "Passwords do not match";
+                isValid = false;
+            } else {
+                errorSpan.textContent = "";
+                flagSpan.innerHTML = '<i class="fas fa-check-circle" style="color: green;"></i>';
+            }
+            break;
+    }
+
+    
+    if (!isValid) {
+        input.classList.add("input-error");
+    } else {
+        input.classList.remove("input-error");
+    }
+}
+
+
+
+
+
+function calculatePasswordStrength(password) {
+    var strength = 0;
+    if (password.length >= 8) {
+        strength++;
+    }
+    if (/[A-Z]/.test(password)) {
+        strength++;
+    }
+    if (/[a-z]/.test(password)) {
+        strength++;
+    }
+    if (/\d/.test(password)) {
+        strength++;
+    }
+    if (/[@$!%*?&]/.test(password)) {
+        strength++;
+    }
+    return strength;
+}
+
+function updatePasswordStrengthText(meter, strength) {
+    var strengthText = "";
+    switch (strength) {
+        case 1:
+            strengthText = "Very Weak";
+            meter.style.color = "red";
+            break;
+        case 2:
+            strengthText = "Weak";
+            meter.style.color = "orange";
+            break;
+        case 3:
+            strengthText = "Moderate";
+            meter.style.color = "yellow";
+            break;
+        case 4:
+            strengthText = "Strong";
+            meter.style.color = "green";
+            break;
+        case 5:
+            strengthText = "Very Strong";
+            meter.style.color = "darkgreen";
+            break;
+        default:
+            strengthText = "";
+            break;
+    }
+    meter.textContent = strengthText;
+}
+
+
+function validateForm() {
+    var isValid = true;
+
+   
+    inputs.forEach(function(input) {
+        validateInput({ target: input });
+        if (input.classList.contains("input-error")) {
+            isValid = false;
+        }
+    });
+
+   
+    if (!isValid) {
+        // alert("Please fill in the required fields correctly.");
+        console.log("error");
+        return false;
+    }
+
+    return true;
+}
+
+
+    </script>
+</body>
+
+</html>

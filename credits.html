@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="credits.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <nav id="nav">
+    <div class="head">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <form action="/search" method="get">
+      <div class="searchbar">
+        <input type="text" name="query" placeholder="Search . . .">
+      </div>
+    </form>
+    <ul>
+      <li><a href="mainIndex.html">Home</a></li>
+      <li><a href="#services">Class</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#footer">Contact</a></li>
+    
+    <div class="btn">
+      <button>Login</button>
+    </div>         
+  </ul>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+  <br>
+  
+    <header id="header1">
+        <h1>Engineering Syllabus</h1>
+        <p>Welcome to the Engineering Syllabus website. Here, you can find all the syllabus for the engineering program, as well as additional resources to help you succeed in your studies.</p> 
+    </header>
+    <h1>Credits</h1>
+    <div class="row">
+        <div class = container>
+          <div class = card>
+            <div class = image>
+              <img href = "#" src =https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg>
+            </div>
+            <div class="content">
+              <h3>This is content</h3>
+              <p>DIn publishing and graphic design,           Lorem ipsum is a placeholder text               commonly used to demonstrate the visual         form of a document or a typeface without         relying on meaningful content.</p>
+            </div>
+          </div>    
+        </div>
+        <div class = container>
+            <div class = card>
+              <div class = image>
+                <img href = "#" src =vishal1.jpg>
+              </div>
+              <div class="content">
+                <h3>This is content</h3>
+                <p>DIn publishing and graphic design,           Lorem ipsum is a placeholder text               commonly used to demonstrate the visual         form of a document or a typeface without         relying on meaningful content.</p>
+              </div>
+            </div>    
+          </div></div>
+    <br><br>
+   
+   
+   
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+             
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div><br>
+                <div><a href="credits.html">Credits</a></div>
+            </div>
+        </div>
+        <br>
+        <div class="footer-bottom">
+            <p>&copy; 2024 All rights reserved.</p>
+            <p>Designed with ❤ by Vishal & Swapnil</p>
+        </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navList = document.querySelector('#nav ul');
+      function toggleMenu() {
+          navList.classList.toggle('active');
+      }
+      menuToggle.addEventListener('click', function() {
+          toggleMenu();
+      });
+      navList.querySelectorAll('a').forEach(function(navLink) {
+          navLink.addEventListener('click', function() {
+              if (navList.classList.contains('active')) {
+                  toggleMenu();
+              }
+          });
+      });
+  });
+  
+  </script>
+</body>
+</html>
