@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Syllabus Resource Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav id="nav">
+        <div class="head">
+          <img src="LOGO.png" alt="Logo">
+        </div>
+        <form action="/search" method="get">
+          <div class="searchbar">
+            <input type="text" name="query" placeholder="Search . . .">
+          </div>
+        </form>
+        <ul>
+          <li style="background-color: transparent; border: none;"><a href="">Home</a></li>
+          <li  style="background-color: transparent; border: none;"><a href="#services">Services</a></li>
+          <li  style="background-color: transparent; border: none;"><a href="#about">About</a></li>
+          <li  style="background-color: transparent; border: none;"><a href="#footer">Contact</a></li>
+    
+          <div class="btn" id="profile" onclick="openwin()">
+            <div class="img" >
+    
+            </div>
+            
+            <!-- <a href="LoginPage.html"><button>Login</button></a> -->
+          </div>
+        </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      <br>
+    <header>
+        <h1>Engineering Syllabus Resource Page</h1>
+    </header>
+  
+    <nav id="nav1">
+        <a href="#course-syllabi">Course Syllabi</a>
+        <a href="#recommended-textbooks">Recommended Textbooks</a>
+        <a href="#online-courses-and-tutorials">Online Courses</a>
+        <a href="#software-and-tools">Software and Tools</a>
+        <a href="#study-guides-and-past-papers">Study Guides</a>
+        <a href="#professional-organizations-and-communities">Communities</a>
+    </nav>
+    
+    <div class="container">
+        <section id="course-syllabi">
+            <h2>Course Syllabi</h2>
+            <ul>
+                <li><strong>Mechanical Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">Thermodynamics</a></li>
+                        <li><a href="#">Fluid Mechanics</a></li>
+                        <li><a href="#">Mechanics of Materials</a></li>
+                        <li><a href="#">Dynamics</a></li>
+                        <li><a href="#">Heat Transfer</a></li>
+                    </ul>
+                </li>
+                <li><strong>Electrical Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">Circuit Analysis</a></li>
+                        <li><a href="#">Electromagnetics</a></li>
+                        <li><a href="#">Control Systems</a></li>
+                        <li><a href="#">Power Systems</a></li>
+                        <li><a href="#">Digital Signal Processing</a></li>
+                    </ul>
+                </li>
+                <li><strong>Civil Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">Structural Analysis</a></li>
+                        <li><a href="#">Geotechnical Engineering</a></li>
+                        <li><a href="#">Transportation Engineering</a></li>
+                        <li><a href="#">Hydraulics</a></li>
+                        <li><a href="#">Construction Management</a></li>
+                    </ul>
+                </li>
+                <li><strong>Computer Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">Data Structures and Algorithms</a></li>
+                        <li><a href="#">Operating Systems</a></li>
+                        <li><a href="#">Computer Networks</a></li>
+                        <li><a href="#">Software Engineering</a></li>
+                        <li><a href="#">Embedded Systems</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="recommended-textbooks">
+            <h2>Recommended Textbooks</h2>
+            <ul>
+                <li><strong>Mechanical Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">"Engineering Mechanics: Dynamics" by J.L. Meriam and L.G. Kraige</a></li>
+                        <li><a href="#">"Thermodynamics: An Engineering Approach" by Yunus A. Çengel and Michael A. Boles</a></li>
+                        <li><a href="#">"Fluid Mechanics" by Frank M. White</a></li>
+                        <li><a href="#">"Heat and Mass Transfer" by Yunus A. Çengel</a></li>
+                        <li><a href="#">"Mechanics of Materials" by R.C. Hibbeler</a></li>
+                    </ul>
+                </li>
+                <li><strong>Electrical Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">"Electric Circuits" by James W. Nilsson and Susan Riedel</a></li>
+                        <li><a href="#">"Fundamentals of Electric Circuits" by Charles K. Alexander and Matthew N.O. Sadiku</a></li>
+                        <li><a href="#">"Control Systems Engineering" by Norman S. Nise</a></li>
+                        <li><a href="#">"Power System Analysis and Design" by J. Duncan Glover and Mulukutla S. Sarma</a></li>
+                        <li><a href="#">"Digital Signal Processing" by John G. Proakis and Dimitris K. Manolakis</a></li>
+                    </ul>
+                </li>
+                <li><strong>Civil Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">"Structural Analysis" by R.C. Hibbeler</a></li>
+                        <li><a href="#">"Principles of Geotechnical Engineering" by Braja M. Das</a></li>
+                        <li><a href="#">"Traffic and Highway Engineering" by Nicholas J. Garber and Lester A. Hoel</a></li>
+                        <li><a href="#">"Hydrology and Hydraulic Systems" by Ram S. Gupta</a></li>
+                        <li><a href="#">"Construction Project Management" by Frederick Gould and Nancy Joyce</a></li>
+                    </ul>
+                </li>
+                <li><strong>Computer Engineering</strong>
+                    <ul class="syllabus-item">
+                        <li><a href="#">"Introduction to Algorithms" by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein</a></li>
+                        <li><a href="#">"Operating System Concepts" by Abraham Silberschatz, Peter B. Galvin, and Greg Gagne</a></li>
+                        <li><a href="#">"Computer Networks" by Andrew S. Tanenbaum and David J. Wetherall</a></li>
+                        <li><a href="#">"Software Engineering: A Practitioner's Approach" by Roger S. Pressman</a></li>
+                        <li><a href="#">"Embedded Systems: Introduction to the MSP432 Microcontroller" by Jonathan W. Valvano</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="online-courses-and-tutorials">
+            <h2>Online Courses and Tutorials</h2>
+            <ul>
+                <li><a href="https://www.coursera.org/learn/engineering-mechanics" target="_blank">Introduction to Engineering Mechanics (Coursera)</a></li>
+                <li><a href="https://www.coursera.org/learn/electrical-engineering" target="_blank">Electrical Engineering Fundamentals (Coursera)</a></li>
+                <li><a href="https://www.edx.org/course/engineering-project-management" target="_blank">Engineering Project Management (edX)</a></li>
+                <li><a href="https://www.edx.org/professional-certificate/software-engineering" target="_blank">Software Engineering Essentials (edX)</a></li>
+                <li><a href="https://www.khanacademy.org/science/electrical-engineering" target="_blank">Electrical Engineering (Khan Academy)</a></li>
+                <li><a href="https://www.khanacademy.org/computing/computer-science" target="_blank">Computer Science (Khan Academy)</a></li>
+            </ul>
+        </section>
+        <section id="software-and-tools">
+            <h2>Software and Tools</h2>
+            <ul>
+                <li><a href="https://www.mathworks.com/products/matlab.html" target="_blank">MATLAB</a> - A high-level language and interactive environment for numerical computation, visualization, and programming.</li>
+                <li><a href="https://www.autodesk.com/products/autocad/overview" target="_blank">AutoCAD</a> - A commercial computer-aided design (CAD) and drafting software application.</li>
+                <li><a href="https://www.solidworks.com/" target="_blank">SolidWorks</a> - A solid modeling computer-aided design and computer-aided engineering computer program.</li>
+                <li><a href="https://www.python.org/" target="_blank">Python</a> - A programming language that lets you work quickly and integrate systems more effectively.</li>
+                <li><a href="https://www.ansys.com/" target="_blank">ANSYS</a> - A comprehensive software suite for engineering simulation and 3D design.</li>
+                <li><a href="https://www.eclipse.org/" target="_blank">Eclipse</a> - An integrated development environment (IDE) used in computer programming.</li>
+            </ul>
+        </section>
+        <section id="study-guides-and-past-papers">
+            <h2>Study Guides and Past Papers</h2>
+            <ul>
+                <li><a href="#">Mechanical Engineering Study Guide</a></li>
+                <li><a href="#">Electrical Engineering Study Guide</a></li>
+                <li><a href="#">Civil Engineering Study Guide</a></li>
+                <li><a href="#">Computer Engineering Study Guide</a></li>
+                <li><a href="#">Past Papers</a></li>
+            </ul>
+        </section>
+        <section id="professional-organizations-and-communities">
+            <h2>Professional Organizations and Communities</h2>
+            <ul>
+                <li><a href="https://www.asme.org/" target="_blank">American Society of Mechanical Engineers (ASME)</a></li>
+                <li><a href="https://www.ieee.org/" target="_blank">Institute of Electrical and Electronics Engineers (IEEE)</a></li>
+                <li><a href="https://www.asce.org/" target="_blank">American Society of Civil Engineers (ASCE)</a></li>
+                <li><a href="https://www.acm.org/" target="_blank">Association for Computing Machinery (ACM)</a></li>
+                <li><a href="https://www.nspe.org/" target="_blank">National Society of Professional Engineers (NSPE)</a></li>
+                <li><a href="https://www.ashrae.org/" target="_blank">American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE)</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer id="footer" class="footer">
+
+        <div class="footer-container">
+          <div class="footer-social">
+            <h3>Follow Us</h3><br>
+            <div class="social-icons">
+              <div class="fb-icon">
+                <a href="#" class="social-icon" id="fb"><i class="fab fa-facebook-f"></i></a>
+              </div>
+              <div class="twiter-icon">
+                <a href="#" class="social-icon" id="twit"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+              <div class="insta-icon">
+                <a href="#" class="social-icon" id="insta"><i class="fab fa-instagram"></i></a>
+              </div>
+              <div class="linkdin-icon">
+                <a href="#" class="social-icon" id="link"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="footer-bottom">
+            <p>&copy; 2024 All rights reserved.</p>
+            <p class="designed-name">Designed by </p>
+            <p id="Tags">Vishal & Swapnil</p>
+            <a href="credits.html">Credits</a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
